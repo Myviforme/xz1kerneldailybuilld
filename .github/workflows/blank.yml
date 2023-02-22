@@ -33,7 +33,7 @@ jobs:
         echo "CLANG_DIR=$CLANG_DIR" >> $GITHUB_ENV
       
     - name: Setup KernelSU
-       run:|
+      run: |
         cd android-kernel
         curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
         wget -q "https://raw.githubusercontent.com/WeeAris/RK-KSU-AOSP-Daily-Build/main/0001-Add-KernelSU-calls-to-the-kernel-source.patch" -O KernelSU.patch
